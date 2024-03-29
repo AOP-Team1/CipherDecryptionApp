@@ -1,0 +1,19 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:vm="clr-namespace:CipherDecryptionApp.ViewModels"
+			 x:DataType="vm:UserInputViewModel"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="CipherDecryptionApp.Views.UserInputView">
+
+	<DockPanel>
+		<Button DockPanel.Dock="Bottom"
+				HorizontalAlignment="Stretch"
+				HorizontalContentAlignment="Center"
+				>Ok</Button>
+		<TextBox AcceptsReturn="True"
+				 Text="{Binding Input}"
+				 Watermark="Input the message you wish to encode/decode here..."/>
+	</DockPanel>
+</UserControl>

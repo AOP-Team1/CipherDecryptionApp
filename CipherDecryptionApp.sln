@@ -5,6 +5,8 @@ VisualStudioVersion = 17.9.34616.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CipherDecryptionApp", "CipherDecryptionApp\CipherDecryptionApp.csproj", "{7A539055-D148-4CC4-B998-1E5FCD9ADD0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CipherDecryptionApp.Tests", "CipherDecryptionApp.Tests\CipherDecryptionApp.Tests.csproj", "{CA2EA952-D86C-4FBD-8441-FD3725AF6376}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7A539055-D148-4CC4-B998-1E5FCD9ADD0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A539055-D148-4CC4-B998-1E5FCD9ADD0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A539055-D148-4CC4-B998-1E5FCD9ADD0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA2EA952-D86C-4FBD-8441-FD3725AF6376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA2EA952-D86C-4FBD-8441-FD3725AF6376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA2EA952-D86C-4FBD-8441-FD3725AF6376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA2EA952-D86C-4FBD-8441-FD3725AF6376}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
