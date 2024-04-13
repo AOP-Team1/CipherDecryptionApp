@@ -22,7 +22,8 @@
 			<vm:UserInputViewModel/>
 		</TabItem>
 		<TabItem Header="Caesar Cipher">
-			<TextBlock Margin="0 10 5 5">This is where the UI for the Caesar Cipher goes</TextBlock>
+			
+			<vm:UserInputViewModel/>
 		</TabItem>
 		<TabItem Header="Playfair Cipher">
 			<TextBlock Margin="0 10 5 5">This is where the UI for the Playfair Cipher goes</TextBlock>

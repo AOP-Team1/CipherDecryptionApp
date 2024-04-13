@@ -9,11 +9,20 @@
 
 	<DockPanel>
 		<Button DockPanel.Dock="Bottom"
-				HorizontalAlignment="Stretch"
-				HorizontalContentAlignment="Center"
-				>Ok</Button>
-		<TextBox AcceptsReturn="True"
-				 Text="{Binding Input}"
-				 Watermark="Input the message you wish to encode/decode here..."/>
+                HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Center"
+                Command="{Binding OkCommand}"
+                Content="Ok" />
+        <TextBox AcceptsReturn="True"
+                 Text="{Binding Input}"
+                 Watermark="Input the message you wish to encode/decode here..." />
+        <TextBox AcceptsReturn="True"
+                 Text="{Binding Key}"
+                 Watermark="Enter the key here..." />
+        <ComboBox SelectedItem="{Binding SelectedMode}"
+                  PlaceholderText="Select mode...">
+            <ComboBoxItem Content="Encode" />
+            <ComboBoxItem Content="Decode" />
+        </ComboBox>
 	</DockPanel>
 </UserControl>
