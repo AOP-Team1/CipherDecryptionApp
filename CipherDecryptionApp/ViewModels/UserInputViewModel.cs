@@ -1,11 +1,8 @@
-﻿using Avalonia;
+﻿using Avalonia.Controls;
 using ReactiveUI;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Reactive;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace CipherDecryptionApp.ViewModels
 {
@@ -14,11 +11,9 @@ namespace CipherDecryptionApp.ViewModels
         private string _input = string.Empty;
         private string _key = string.Empty;
         private string _output = string.Empty;
-        private string[] _modes = new[] { "Encode", "Decode" };
-        private string _selectedMode;
 
-        public ReactiveCommand<Unit, Unit> OkCommand { get; }
-        public string[] Modes => _modes;
+        public ReactiveCommand<Unit, Unit> EncodeCommand { get; }
+        public ReactiveCommand<Unit, Unit> DecodeCommand { get; }
 
         public UserInputViewModel()
         {
@@ -28,7 +23,8 @@ namespace CipherDecryptionApp.ViewModels
                 (input, key) => !string.IsNullOrWhiteSpace(input) && !string.IsNullOrWhiteSpace(key)
             );
 
-            OkCommand = ReactiveCommand.Create(ExecuteCommand, isValidObservable);
+            EncodeCommand = ReactiveCommand.Create(ExecuteEncodeCommand, isValidObservable);
+            DecodeCommand = ReactiveCommand.Create(ExecuteDecodeCommand, isValidObservable);
         }
 
         public string Input
@@ -49,19 +45,16 @@ namespace CipherDecryptionApp.ViewModels
             set => this.RaiseAndSetIfChanged(ref _output, value);
         }
 
-        public string SelectedMode
-        {
-            get => _selectedMode;
-            set => this.RaiseAndSetIfChanged(ref _selectedMode, value);
-        }
-
-        private void ExecuteCommand()
+        private void ExecuteEncodeCommand()
         {
             ICipher cipher = new CaesarCipher(int.Parse(Key));
-            if (SelectedMode == "Encode")
-                Output = cipher.Encode(Input);
-            else if (SelectedMode == "Decode")
-                Output = cipher.Decode(Input);
+            Output = cipher.Encode(Input);
+        }
+
+        private void ExecuteDecodeCommand()
+        {
+            ICipher cipher = new CaesarCipher(int.Parse(Key));
+            Output = cipher.Decode(Input);
         }
     }
 }
