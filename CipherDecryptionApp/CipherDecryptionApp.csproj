@@ -23,4 +23,14 @@
     <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.10" />
     <PackageReference Include="Avalonia.ReactiveUI" Version="11.0.10" />
   </ItemGroup>
+
+
+  <ItemGroup>
+    <Compile Update="Views\DoubleTranspositionWindow.axaml.cs">
+      <DependentUpon>DoubleTranspositionWindow.axaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PlayfairWindow.axaml.cs">
+      <DependentUpon>PlayfairWindow.axaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

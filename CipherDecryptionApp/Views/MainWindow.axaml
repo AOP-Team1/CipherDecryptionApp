@@ -25,10 +25,10 @@
 			<vm:UserInputViewModel/>
 		</TabItem>
 		<TabItem Header="Playfair Cipher">
-			<TextBlock Margin="0 10 5 5">This is where the UI for the Playfair Cipher goes</TextBlock>
+			<vm:PlayfairViewModel/>
 		</TabItem>
 		<TabItem Header="Double Transposition Cipher">
-			<TextBlock Margin="0 10 5 5">This is where the UI for the Double Transposition Cipher goes</TextBlock>
+			<vm:DoubleTranspositionViewModel/>
 		</TabItem>
 	</TabControl>
 	</Panel>
