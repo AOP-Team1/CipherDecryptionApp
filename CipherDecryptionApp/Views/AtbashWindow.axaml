@@ -3,9 +3,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:CipherDecryptionApp.ViewModels"
-             x:DataType="vm:AtbashWindowModel"
+             x:DataType="vm:AtbashViewModel"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="CipherDecryptionApp.Views.AtbashWindow">
+             x:Class="CipherDecryptionApp.Views.AtbashView">
 
     <StackPanel>
         <DockPanel>

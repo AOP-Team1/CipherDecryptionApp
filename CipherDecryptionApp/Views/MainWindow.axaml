@@ -19,10 +19,9 @@
 	<Panel>
 	<TabControl Margin="5" HorizontalAlignment="Center">
 		<TabItem Header="Atbash Cipher">
-			<vm:UserInputViewModel/>
+			<vm:AtbashViewModel/>
 		</TabItem>
 		<TabItem Header="Caesar Cipher">
-			
 			<vm:UserInputViewModel/>
 		</TabItem>
 		<TabItem Header="Playfair Cipher">

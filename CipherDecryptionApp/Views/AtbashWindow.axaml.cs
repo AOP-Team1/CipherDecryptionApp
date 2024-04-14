@@ -2,9 +2,9 @@ using Avalonia.Controls;
 
 namespace CipherDecryptionApp.Views
 {
-    public partial class AtbashWindow : UserControl
+    public partial class AtbashView : UserControl
     {
-        public AtbashWindow()
+        public AtbashView()
         {
             InitializeComponent();
         }
