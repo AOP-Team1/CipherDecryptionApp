@@ -4,7 +4,7 @@ using ReactiveUI;
 namespace CipherDecryptionApp.ViewModels
 
 {
-    public class AtBashWindow : ViewModelBase
+    public class AtbashWindowModel : ViewModelBase
     {
         private string _input = string.Empty;
         private string _output = string.Empty;
@@ -12,7 +12,7 @@ namespace CipherDecryptionApp.ViewModels
         public ReactiveCommand<Unit, Unit> EncodeCommand { get; }
         public ReactiveCommand<Unit, Unit> DecodeCommand { get; }
 
-        public AtBashWindow()
+        public AtbashWindowModel()
         {
             var isValidObservable = this.WhenAnyValue(
                 x => x.Input,
