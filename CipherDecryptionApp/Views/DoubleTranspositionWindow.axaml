@@ -23,6 +23,12 @@
         <TextBox AcceptsReturn="True"
                  Text="{Binding Input}"
                  Watermark="Input the message you wish to encode/decode here..." />
+		<TextBox AcceptsReturn="True"
+		 Text="{Binding Key1}"
+		 Watermark="Input the first key here..." />
+		<TextBox AcceptsReturn="True"
+		 Text="{Binding Key2}"
+		 Watermark="Input the second key here..." />
         <TextBox Text="{Binding Output}" IsReadOnly="True" Background="LightGray" Margin="5"/>
     </StackPanel>
 </UserControl>

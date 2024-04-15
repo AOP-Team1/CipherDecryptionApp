@@ -11,6 +11,7 @@ namespace CipherDecryptionApp.ViewModels
 	public class PlayfairViewModel : ViewModelBase
 	{
 		private string _input = string.Empty;
+		private string _key = string.Empty;
 		private string _output = string.Empty;
 
 		public ReactiveCommand<Unit, Unit> EncodeCommand { get; }
@@ -33,6 +34,11 @@ namespace CipherDecryptionApp.ViewModels
 			set => this.RaiseAndSetIfChanged(ref _input, value);
 		}
 
+		public string Key
+		{
+			get => _key;
+			set => this.RaiseAndSetIfChanged(ref _key, value);
+		}
 
 		public string Output
 		{
@@ -42,13 +48,13 @@ namespace CipherDecryptionApp.ViewModels
 
 		private void ExecuteEncodeCommand()
 		{
-			ICipher cipher = new PlayfairCipher();
+			ICipher cipher = new PlayfairCipher(Key);
 			Output = cipher.Encode(Input);
 		}
 
 		private void ExecuteDecodeCommand()
 		{
-			ICipher cipher = new PlayfairCipher();
+			ICipher cipher = new PlayfairCipher(Key);
 			Output = cipher.Decode(Input);
 		}
 	}
